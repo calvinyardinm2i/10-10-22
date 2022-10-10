@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>créer DOM js part 1</title>
+</head>
+<body>
+
+	<script type='text/javascript'>
+		divElement = document.createElement("div")
+		divElement.setAttribute("id", "divTP1")
+
+		temp = document.createTextNode("Le ")
+		divElement.appendChild(temp)
+
+		temp = document.createElement("strong")
+		tempText = document.createTextNode("World Wide Web Consortium")
+		temp.appendChild(tempText)
+		divElement.appendChild(temp)
+
+		temp = document.createTextNode(", abrégé par le sigle ")
+		divElement.appendChild(temp)
+
+		temp = document.createElement("strong")
+		tempText = document.createTextNode("W3C")
+		temp.appendChild(tempText)
+		divElement.appendChild(temp)
+
+		temp = document.createTextNode(", est un ")
+		divElement.appendChild(temp)
+
+		temp = document.createElement("a")
+		temp.setAttribute("href", "http://fr.wikipedia.org/wiki/Organisme_de_normalisation")
+		temp.setAttribute("title", "Organisme de normalisation")
+		temp.setAttribute("target", "_blank")
+		tempText = document.createTextNode("Organisme de standardisation")
+		temp.appendChild(tempText)
+		divElement.appendChild(temp)
+
+		temp = document.createTextNode(" à but non-lucratif chargé de promouvoir la compatibilité des technologies du ")
+		divElement.appendChild(temp)
+
+		temp = document.createElement("a")
+		temp.setAttribute("href", "http://fr.wikipedia.org/wiki/World_Wide_Web")
+		temp.setAttribute("title", "World Wide Web")
+		temp.setAttribute("target", "_blank")
+		tempText = document.createTextNode("World Wide Web")
+		temp.appendChild(tempText)
+		divElement.appendChild(temp)
+
+		document.body.appendChild(divElement)
+	</script>
+
+</body>
+</html>

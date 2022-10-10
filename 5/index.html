@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		divElement = document.createElement("div")
+		divElement.setAttribute("id", "divTP2")
+
+		temp = document.createElement("p")
+		tempText = document.createTextNode("Languages basés sur ECMAScript :")
+		temp.appendChild(tempText)
+		divElement.appendChild(temp)
+
+		temp = document.createElement("ul")
+
+		tempItem = document.createElement("li")
+		tempText = document.createTextNode("JavaScript")
+		tempItem.appendChild(tempText)
+		temp.appendChild(tempItem)
+
+		tempItem = document.createElement("li")
+		tempText = document.createTextNode("JScript")
+		tempItem.appendChild(tempText)
+		temp.appendChild(tempItem)
+
+		tempItem = document.createElement("li")
+		tempText = document.createTextNode("ActionScript")
+		tempItem.appendChild(tempText)
+		temp.appendChild(tempItem)
+
+		tempItem = document.createElement("li")
+		tempText = document.createTextNode("EX4")
+		tempItem.appendChild(tempText)
+		temp.appendChild(tempItem)
+
+		divElement.appendChild(temp)
+
+		document.body.appendChild(divElement)
+	</script>
+
+</body>
+</html>

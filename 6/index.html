@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		function html_element(tag, attributes = null, content = null) {
+			el = document.createElement(tag)
+			if (content) {
+				if (typeof(content) == "string") {
+					content = document.createTextNode(content)
+				}
+				else if (content.constructor === Array) {
+					for (obj of content) {
+						el.appendChild(obj)
+					}
+				}
+				else {
+					el.appendChild(content)
+				}
+			}
+			if (attributes) {
+				for ([key, value] of Object.entries(attributes)) {
+					el.setAttribute(key, value)
+				}
+			}
+			return el
+		}
+		document.body.appendChild(
+			html_element("div", {id: "divTP3"},
+				html_element("form", {enctype: "multipart/form-data", method: "POST", action: "upload.php"},
+					html_element("fieldset", null, Array(
+						html_element("legend", null, "Uploader une image"),
+						html_element("h1", null, "hello llsdflfglfglslgflhflg")
+					))
+				)
+			)
+		)
+	</script>
+
+</body>
+</html>
